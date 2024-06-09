@@ -1,7 +1,9 @@
-import 'package:al_kitaab/Featurs/splach/prasention/views/splach_view.dart';
+import 'package:al_kitaab/Featurs/home/prasention/views/home_view.dart';
 import 'package:al_kitaab/core/utils/colors.dart';
+import 'package:al_kitaab/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
   runApp(const AlKitaab());
@@ -18,10 +20,18 @@ class AlKitaab extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp(
+          locale: const Locale("ar"),
+          localizationsDelegates: const [
+            S.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: S.delegate.supportedLocales,
           theme: ThemeData()
               .copyWith(scaffoldBackgroundColor: AppColors.kPrimaryColor),
           title: 'AL-KITAAB',
-          home: const SplachView(),
+          home: const HomeView(),
         );
       },
     );
