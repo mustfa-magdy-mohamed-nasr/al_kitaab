@@ -1,5 +1,8 @@
 {
-
-    "al_quran":"القرأن"
-
-}
+    "@@locale": "ar",
+    "al_quran": "القرأن",
+    "Listen_to_Quran": "أستمع الي القران",
+    "translated_Quran": "القران المترجم",
+    "almashaf": "المصحف",
+    "Seal": "ختم"
+  }

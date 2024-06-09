@@ -50,11 +50,51 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Al-Quran`
+  /// `Quran`
   String get al_quran {
     return Intl.message(
-      'Al-Quran',
+      'Quran',
       name: 'al_quran',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Listen to Quran`
+  String get Listen_to_Quran {
+    return Intl.message(
+      'Listen to Quran',
+      name: 'Listen_to_Quran',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Translated Quran`
+  String get translated_Quran {
+    return Intl.message(
+      'Translated Quran',
+      name: 'translated_Quran',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Al-Mashaf`
+  String get almashaf {
+    return Intl.message(
+      'Al-Mashaf',
+      name: 'almashaf',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Seal`
+  String get Seal {
+    return Intl.message(
+      'Seal',
+      name: 'Seal',
       desc: '',
       args: [],
     );

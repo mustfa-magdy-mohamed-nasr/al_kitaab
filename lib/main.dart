@@ -28,8 +28,8 @@ class AlKitaab extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: S.delegate.supportedLocales,
-          theme: ThemeData()
-              .copyWith(scaffoldBackgroundColor: AppColors.kPrimaryColor),
+          // theme: ThemeData()
+          //     .copyWith(scaffoldBackgroundColor: AppColors.kPrimaryColor),
           title: 'AL-KITAAB',
           home: const HomeView(),
         );

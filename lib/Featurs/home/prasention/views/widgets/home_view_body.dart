@@ -1,4 +1,5 @@
-import 'package:al_kitaab/generated/l10n.dart';
+import 'package:al_kitaab/Featurs/home/prasention/views/widgets/azkarContaner.dart';
+import 'package:al_kitaab/Featurs/home/prasention/views/widgets/end_home_view_body.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -6,17 +7,19 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return const Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Center(
-          child: Text("تفسير المیسر"),
+        Spacer(
+          flex: 1,
         ),
-        Center(
-          child: Text(S.of(context).al_quran),
+        AzkarContaner(),
+        Spacer(
+          flex: 1,
         ),
-        const Center(
-          child: Text("Localization in Flutter"),
+        EndHomeViewBody(),
+        Spacer(
+          flex: 2,
         ),
       ],
     );

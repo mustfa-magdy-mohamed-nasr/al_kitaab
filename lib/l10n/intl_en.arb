@@ -1,4 +1,8 @@
 {
-
-    "al_quran":"Al-Quran"
-}
+    "@@locale": "en",
+    "al_quran": "Quran",
+    "Listen_to_Quran": "Listen to Quran",
+    "translated_Quran": "Translated Quran",
+    "almashaf": "Al-Mashaf",
+    "Seal": "Seal"
+  }flutter pub run intl_utils:generate
