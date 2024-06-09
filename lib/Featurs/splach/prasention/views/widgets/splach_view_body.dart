@@ -12,7 +12,7 @@ class SplachViewBody extends StatelessWidget {
       children: [
         const Spacer(),
         Image.asset(Assets.logo),
-        const Center(
+        Center(
           child: Text(
             'AL-KITAAB',
             style: Styles.textStyle45,
