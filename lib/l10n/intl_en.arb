@@ -4,5 +4,8 @@
     "Listen_to_Quran": "Listen to Quran",
     "translated_Quran": "Translated Quran",
     "almashaf": "Al-Mashaf",
-    "Seal": "Seal"
-  }flutter pub run intl_utils:generate
+    "Seal": "Seal",
+    "Hallelujah": "Hallelujah and praise, Hallelujah great",
+    "Citation_for_morning": "Citation for Morning",
+    "Citation_for_Evening": "Citation for Evening"
+  }

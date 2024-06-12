@@ -99,6 +99,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Hallelujah and praise, Hallelujah great`
+  String get Hallelujah {
+    return Intl.message(
+      'Hallelujah and praise, Hallelujah great',
+      name: 'Hallelujah',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Citation for Morning`
+  String get Citation_for_morning {
+    return Intl.message(
+      'Citation for Morning',
+      name: 'Citation_for_morning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Citation for Evening`
+  String get Citation_for_Evening {
+    return Intl.message(
+      'Citation for Evening',
+      name: 'Citation_for_Evening',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

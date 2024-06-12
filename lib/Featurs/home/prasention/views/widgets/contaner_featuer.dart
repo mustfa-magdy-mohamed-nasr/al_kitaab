@@ -6,7 +6,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ContanerFeature extends StatelessWidget {
   const ContanerFeature({
-    super.key, required this.image, required this.text,
+    super.key,
+    required this.image,
+    required this.text,
   });
   final String image;
   final String text;
@@ -15,7 +17,7 @@ class ContanerFeature extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(5.w),
       width: 160.w,
-      height: 150.h,
+      height: 160.h,
       decoration: BoxDecoration(
           color: AppColors.kPrimaryColor,
           borderRadius: BorderRadius.circular(40.w)),
@@ -24,16 +26,18 @@ class ContanerFeature extends StatelessWidget {
         children: [
           Container(
             width: 107.w,
-            height: 90.h,
+            height: 80.h,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30), color: Colors.white,
+                borderRadius: BorderRadius.circular(30),
+                color: Colors.white,
                 image: DecorationImage(image: AssetImage(image))),
           ),
-          Padding(
-            padding: EdgeInsets.all(5.w),
+          SizedBox(
+            width: 90.w,
             child: Text(
-             text,
+              text,
               style: Styles.textStyle24white,
+              textAlign: TextAlign.center,
             ),
           )
         ],
