@@ -1,4 +1,4 @@
-import 'package:al_kitaab/Featurs/azkar/prasention/data/models/azkar.dart';
+import 'package:al_kitaab/Featurs/azkar/data/models/azkar.dart';
 import 'package:al_kitaab/Featurs/azkar/prasention/views/widgets/azkar_counter.dart';
 import 'package:flutter/material.dart';
 

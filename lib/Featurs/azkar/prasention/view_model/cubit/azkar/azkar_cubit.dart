@@ -1,4 +1,4 @@
-import 'package:al_kitaab/Featurs/azkar/prasention/data/models/azkar.dart';
+import 'package:al_kitaab/Featurs/azkar/data/models/azkar.dart';
 import 'package:al_kitaab/Featurs/azkar/prasention/view_model/cubit/azkar/azkar_state.dart';
 import 'package:bloc/bloc.dart';
 

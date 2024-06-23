@@ -1,6 +1,6 @@
 
 
-import 'package:al_kitaab/Featurs/azkar/prasention/data/models/azkar.dart';
+import 'package:al_kitaab/Featurs/azkar/data/models/azkar.dart';
 
 abstract class AzkarState {}
 
