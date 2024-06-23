@@ -1,4 +1,4 @@
-import 'package:al_kitaab/Featurs/azkar/azkar_al_sa/prasention/views/widgets/azkar_al_sa_body.dart';
+import 'package:al_kitaab/Featurs/azkar/prasention/views/widgets/azkar_view_body.dart';
 import 'package:al_kitaab/core/utils/colors.dart';
 import 'package:al_kitaab/core/utils/styles.dart';
 import 'package:al_kitaab/generated/l10n.dart';
@@ -20,9 +20,7 @@ class AzkarView extends StatelessWidget {
           centerTitle: true,
           backgroundColor: AppColors.kPrimaryColor,
         ),
-        body:  AzkarVirwBody(
-          selectedAzkar: selectedAzkar,
-        ),
+        body: AzkarViewBody(selectedAzkar: selectedAzkar)
       ),
     );
   }

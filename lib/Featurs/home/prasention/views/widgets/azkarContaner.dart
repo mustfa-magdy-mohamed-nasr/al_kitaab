@@ -1,4 +1,4 @@
-import 'package:al_kitaab/Featurs/azkar/azkar_al_sa/prasention/views/azkar_view.dart';
+import 'package:al_kitaab/Featurs/azkar/prasention/views/azkar_view.dart';
 import 'package:al_kitaab/core/utils/assets.dart';
 import 'package:al_kitaab/core/utils/colors.dart';
 import 'package:al_kitaab/core/utils/styles.dart';

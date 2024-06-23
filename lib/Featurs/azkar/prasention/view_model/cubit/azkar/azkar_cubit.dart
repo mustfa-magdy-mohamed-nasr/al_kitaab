@@ -1,5 +1,5 @@
-import 'package:al_kitaab/Featurs/azkar/azkar_al_sa/prasention/data/models/azkar.dart';
-import 'package:al_kitaab/Featurs/azkar/azkar_al_sa/prasention/view_model/cubit/azkar/azkar_state.dart';
+import 'package:al_kitaab/Featurs/azkar/prasention/data/models/azkar.dart';
+import 'package:al_kitaab/Featurs/azkar/prasention/view_model/cubit/azkar/azkar_state.dart';
 import 'package:bloc/bloc.dart';
 
 class AzkarCubit extends Cubit<AzkarState> {
@@ -169,6 +169,26 @@ class AzkarCubit extends Cubit<AzkarState> {
       // أضف المزيد من الأذكار هنا
     ];
 
-    emit(AzkarLoaded(morningAzkar, eveningAzkar));
+    emit(AzkarLoaded(morningAzkar: morningAzkar, eveningAzkar: eveningAzkar));
+  }
+  void incrementCounter(int index, String selectedAzkar) {
+    final currentState = state;
+    if (currentState is AzkarLoaded) {
+      if (selectedAzkar == 'sa') {
+        if (currentState.morningCounters[index] < currentState.morningAzkar[index].repeatCount) {
+          currentState.morningCounters[index]++;
+        }
+      } else if (selectedAzkar == 'ma') {
+        if (currentState.eveningCounters[index] < currentState.eveningAzkar[index].repeatCount) {
+          currentState.eveningCounters[index]++;
+        }
+      }
+      emit(AzkarLoaded(
+        morningAzkar: currentState.morningAzkar,
+        eveningAzkar: currentState.eveningAzkar,
+        morningCounters: currentState.morningCounters,
+        eveningCounters: currentState.eveningCounters,
+      ));
+    }
   }
 }
