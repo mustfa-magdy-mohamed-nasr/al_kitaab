@@ -6,5 +6,5 @@ abstract class Styles {
       fontSize: 45.sp, fontWeight: FontWeight.w800, color: Colors.white);
   static TextStyle textStyle24white = const TextStyle(
       color: Colors.white, fontWeight: FontWeight.w900, fontSize: 18);
-  static TextStyle textStyl24White = const TextStyle(fontSize: 24,color: Colors.white);
+  static TextStyle textStylWhite = const TextStyle(color: Colors.white);
 }

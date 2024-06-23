@@ -20,7 +20,7 @@ class AzkarContaner extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
       padding: EdgeInsets.all(10.w),
       width: 365.w,
-      height: 120.h,
+      height: 150.h,
       decoration: BoxDecoration(
           color: AppColors.kPrimaryColor,
           borderRadius: BorderRadius.circular(20.w),
@@ -35,6 +35,7 @@ class AzkarContaner extends StatelessWidget {
           Text(
             S.of(context).Hallelujah,
             style: Styles.textStyle24white,
+            textAlign: TextAlign.center,
           ),
           Row(
             children: [
@@ -45,10 +46,16 @@ class AzkarContaner extends StatelessWidget {
                       MaterialPageRoute(
                           builder: (context) => const AzkarAlSa()));
                 },
-                child: Card(
-                  child: Padding(
-                    padding: EdgeInsets.all(10.w),
-                    child: Text(S.of(context).Citation_for_morning),
+                child: SizedBox(
+                  width: 150.w,
+                  child: Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(10.w),
+                      child: Text(
+                        S.of(context).Citation_for_morning,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -60,10 +67,16 @@ class AzkarContaner extends StatelessWidget {
                       MaterialPageRoute(
                           builder: (context) => const AzkarAlMa()));
                 },
-                child: Card(
-                  child: Padding(
-                    padding: EdgeInsets.all(10.w),
-                    child: Text(S.of(context).Citation_for_Evening),
+                child: SizedBox(
+                  width: 150.w,
+                  child: Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(10.w),
+                      child: Text(
+                        S.of(context).Citation_for_Evening,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
                   ),
                 ),
               )

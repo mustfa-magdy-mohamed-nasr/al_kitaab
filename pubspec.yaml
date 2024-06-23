@@ -30,10 +30,11 @@ environment:
 dependencies:
   bloc: ^8.1.4
   cupertino_icons: ^1.0.6
+  equatable: ^2.0.5
   flutter:
     sdk: flutter
-  flutter_localization: ^0.2.0
   flutter_bloc: ^8.0.0
+  flutter_localization: ^0.2.0
   flutter_native_splash: ^2.4.0
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.0.10+1

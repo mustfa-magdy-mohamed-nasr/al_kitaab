@@ -36,7 +36,7 @@ class ContanerFeature extends StatelessWidget {
             width: 90.w,
             child: Text(
               text,
-              style: Styles.textStyle24white,
+              style: Styles.textStylWhite,
               textAlign: TextAlign.center,
             ),
           )
