@@ -10,23 +10,19 @@ class EndHomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
+    return const Wrap(
       children: [
         ContanerFeature(
           image: Assets.seal,
-          text: S.of(context).almashaf,
         ),
         ContanerFeature(
           image: Assets.headphones,
-          text: S.of(context).Listen_to_Quran,
         ),
         ContanerFeature(
           image: Assets.translated,
-          text: S.of(context).translated_Quran,
         ),
         ContanerFeature(
           image: Assets.quran,
-          text: S.of(context).Seal,
         ),
       ],
     );

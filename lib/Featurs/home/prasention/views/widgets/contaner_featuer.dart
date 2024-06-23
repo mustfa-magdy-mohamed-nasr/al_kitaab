@@ -8,10 +8,8 @@ class ContanerFeature extends StatelessWidget {
   const ContanerFeature({
     super.key,
     required this.image,
-    required this.text,
   });
   final String image;
-  final String text;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,14 +30,7 @@ class ContanerFeature extends StatelessWidget {
                 color: Colors.white,
                 image: DecorationImage(image: AssetImage(image))),
           ),
-          SizedBox(
-            width: 90.w,
-            child: Text(
-              text,
-              style: Styles.textStylWhite,
-              textAlign: TextAlign.center,
-            ),
-          )
+         
         ],
       ),
     );
