@@ -1,12 +1,9 @@
-import 'package:al_kitaab/Featurs/azkar/azkar_al_ma/prasention/views/azkar_al_ma.dart';
-import 'package:al_kitaab/Featurs/azkar/azkar_al_sa/prasention/views/azkar_al_sa.dart';
+import 'package:al_kitaab/Featurs/azkar/azkar_al_sa/prasention/views/azkar_view.dart';
 import 'package:al_kitaab/core/utils/assets.dart';
 import 'package:al_kitaab/core/utils/colors.dart';
 import 'package:al_kitaab/core/utils/styles.dart';
 import 'package:al_kitaab/generated/l10n.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AzkarContaner extends StatelessWidget {
@@ -42,9 +39,13 @@ class AzkarContaner extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const AzkarAlSa()));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AzkarView(
+                        selectedAzkar: 'sa',
+                      ), // Pass AzkarType.evening
+                    ),
+                  );
                 },
                 child: SizedBox(
                   width: 150.w,
@@ -59,13 +60,16 @@ class AzkarContaner extends StatelessWidget {
                   ),
                 ),
               ),
-              const Spacer(),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const AzkarAlMa()));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AzkarView(
+                        selectedAzkar: 'ma',
+                      ), // Pass AzkarType.evening
+                    ),
+                  );
                 },
                 child: SizedBox(
                   width: 150.w,
@@ -79,7 +83,7 @@ class AzkarContaner extends StatelessWidget {
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           )
         ],

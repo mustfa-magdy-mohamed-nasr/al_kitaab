@@ -1,20 +1,23 @@
+import 'dart:developer';
+
 import 'package:al_kitaab/Featurs/azkar/azkar_al_sa/prasention/data/models/azkar.dart';
-import 'package:al_kitaab/Featurs/azkar/azkar_al_sa/prasention/view_model/cubit/azkar/azkar_cubit.dart';
 import 'package:al_kitaab/Featurs/azkar/azkar_al_sa/prasention/view_model/cubit/azkar/azkar_state.dart';
+import 'package:al_kitaab/Featurs/azkar/azkar_view/prasention/view_model/cubit/azkar/azkar_cubit.dart';
 import 'package:al_kitaab/core/utils/colors.dart';
 import 'package:al_kitaab/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AzkarAlSaBody extends StatefulWidget {
-  const AzkarAlSaBody({super.key});
+class AzkarVirwBody extends StatefulWidget {
+  const AzkarVirwBody({super.key, required this.selectedAzkar});
+  final String selectedAzkar;
 
   @override
-  State<AzkarAlSaBody> createState() => _AzkarAlSaBodyState();
+  State<AzkarVirwBody> createState() => _AzkarVirwBodyState();
 }
 
-class _AzkarAlSaBodyState extends State<AzkarAlSaBody> {
+class _AzkarVirwBodyState extends State<AzkarVirwBody> {
   late List<int> counters;
 
   @override
@@ -30,13 +33,20 @@ class _AzkarAlSaBodyState extends State<AzkarAlSaBody> {
       child: BlocBuilder<AzkarCubit, AzkarState>(
         builder: (context, state) {
           if (state is AzkarLoaded) {
+            List<Azkar> azkarList = [];
+            if (widget.selectedAzkar == 'sa') {
+              azkarList = state.morningAzkar;
+            } else if (widget.selectedAzkar == 'ma') {
+              azkarList = state.eveningAzkar;
+              log(azkarList.toString());
+            }
             if (counters.isEmpty) {
-              counters = List<int>.filled(state.morningAzkar.length, 0);
+              counters = List<int>.filled(azkarList.length, 0);
             }
             return ListView.builder(
-              itemCount: state.morningAzkar.length,
+              itemCount: azkarList.length,
               itemBuilder: (context, index) {
-                final azkar = state.morningAzkar[index];
+                final azkar = azkarList[index];
                 return AzkarItem(
                   azkar: azkar,
                   counter: counters[index],
@@ -51,7 +61,7 @@ class _AzkarAlSaBodyState extends State<AzkarAlSaBody> {
               },
             );
           }
-          return const Center(child: CircularProgressIndicator());
+          return const Center(child: Text('Failed to load Azkar'));
         },
       ),
     );
@@ -130,7 +140,6 @@ class _AzkarItemState extends State<AzkarItem> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  
                   Counter(
                     onPressed: widget.onPressed,
                     count: widget.counter,
