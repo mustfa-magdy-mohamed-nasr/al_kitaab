@@ -1,4 +1,4 @@
-import 'package:al_kitaab/Featurs/home/prasention/views/widgets/custom_drawer.dart';
+import 'package:al_kitaab/Featurs/home/prasention/views/widgets/drawer/child_in_drawer.dart';
 import 'package:al_kitaab/Featurs/home/prasention/views/widgets/home_view_body.dart';
 import 'package:al_kitaab/core/utils/colors.dart';
 import 'package:al_kitaab/core/utils/styles.dart';
@@ -17,10 +17,9 @@ class HomeView extends StatelessWidget {
           title: Text(S.of(context).al_quran, style: Styles.textStyle24white),
           centerTitle: true,
         ),
-        drawer: const CustomDrawer(),
+        drawer: const Drawer(child: ChildInDrawer()),
         body: const HomeViewBody(),
       ),
     );
   }
 }
-

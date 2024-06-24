@@ -14,7 +14,7 @@ class AzkarContaner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
+      margin: EdgeInsets.all(10.w),
       padding: EdgeInsets.all(10.w),
       width: 365.w,
       height: 150.h,

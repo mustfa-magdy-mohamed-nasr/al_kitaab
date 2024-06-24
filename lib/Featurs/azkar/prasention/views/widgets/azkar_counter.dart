@@ -30,7 +30,7 @@ class Counter extends StatelessWidget {
           children: [
             Text(
               "$count",
-              style: Styles.textStylWhite,
+              style: Styles.textStyle24white,
             ),
             Text(
               '/$total',

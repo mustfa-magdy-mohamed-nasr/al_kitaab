@@ -1,7 +1,7 @@
 class Azkar {
-  final String title;
   final String content;
   final int repeatCount;
-
-  Azkar({required this.title, required this.content, required this.repeatCount});
+  final String engContant;
+  Azkar( 
+      { required this.content, required this.repeatCount,required this.engContant,});
 }

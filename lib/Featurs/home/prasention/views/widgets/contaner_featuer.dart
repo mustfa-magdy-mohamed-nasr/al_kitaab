@@ -1,6 +1,4 @@
 import 'package:al_kitaab/core/utils/colors.dart';
-import 'package:al_kitaab/core/utils/styles.dart';
-import 'package:al_kitaab/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -13,9 +11,9 @@ class ContanerFeature extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(5.w),
+      margin: EdgeInsets.all(8.w),
       width: 160.w,
-      height: 160.h,
+      height: 140.h,
       decoration: BoxDecoration(
           color: AppColors.kPrimaryColor,
           borderRadius: BorderRadius.circular(40.w)),
@@ -30,7 +28,6 @@ class ContanerFeature extends StatelessWidget {
                 color: Colors.white,
                 image: DecorationImage(image: AssetImage(image))),
           ),
-         
         ],
       ),
     );

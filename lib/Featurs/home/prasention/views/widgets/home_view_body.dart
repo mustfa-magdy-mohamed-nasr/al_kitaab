@@ -19,7 +19,7 @@ class HomeViewBody extends StatelessWidget {
         ),
         EndHomeViewBody(),
         Spacer(
-          flex: 2,
+          flex: 3,
         ),
       ],
     );
