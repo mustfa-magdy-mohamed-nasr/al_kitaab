@@ -25,7 +25,7 @@ class AzkarContaner extends StatelessWidget {
               image: AssetImage(
                 Assets.audio,
               ),
-              fit: BoxFit.cover)),
+              fit: BoxFit.fill)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

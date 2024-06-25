@@ -8,36 +8,31 @@ class Counter extends StatelessWidget {
     super.key,
     required this.count,
     required this.total,
-    this.onPressed,
   });
 
   final int count;
   final int total;
-  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onPressed,
-      child: Container(
-        width: 100.w,
-        height: 70.h,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(380.h),
-          color: AppColors.kPrimaryColor,
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "$count",
-              style: Styles.textStyle24white,
-            ),
-            Text(
-              '/$total',
-              style: Styles.textStylWhite,
-            )
-          ],
-        ),
+    return Container(
+      width: 100.w,
+      height: 70.h,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(380.h),
+        color: AppColors.kPrimaryColor,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            "$count",
+            style: Styles.textStyle24white,
+          ),
+          Text(
+            '/$total',
+            style: Styles.textStylWhite,
+          )
+        ],
       ),
     );
   }

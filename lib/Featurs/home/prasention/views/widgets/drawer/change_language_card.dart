@@ -1,4 +1,5 @@
 import 'package:al_kitaab/core/cubits/locale_cubi/locale_cubit.dart';
+import 'package:al_kitaab/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -42,7 +43,7 @@ class ChangeLanguageCard extends StatelessWidget {
                         Navigator.of(context).pop();
                       },
                       //add s text
-                      child: const Text("English"),
+                      child: Text(S.of(context).English),
                     ),
                   ),
                 ],

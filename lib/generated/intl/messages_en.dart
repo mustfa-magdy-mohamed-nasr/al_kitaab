@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Citation for Evening"),
         "Citation_for_morning":
             MessageLookupByLibrary.simpleMessage("Citation for Morning"),
+        "English": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "Hallelujah": MessageLookupByLibrary.simpleMessage(
             "Hallelujah and praise, Hallelujah great"),
         "Listen_to_Quran":

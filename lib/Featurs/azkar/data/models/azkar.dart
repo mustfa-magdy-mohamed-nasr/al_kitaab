@@ -1,7 +1,10 @@
 class Azkar {
-  final String content;
-  final int repeatCount;
-  final String engContant;
-  Azkar( 
-      { required this.content, required this.repeatCount,required this.engContant,});
+  final String zekr;
+  final int repeat;
+  final String bless;
+  Azkar({
+    required this.zekr,
+    required this.repeat,
+    required this.bless,
+  });
 }
