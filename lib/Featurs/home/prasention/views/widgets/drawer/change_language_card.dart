@@ -41,7 +41,8 @@ class ChangeLanguageCard extends StatelessWidget {
                         context.read<LocaleCubit>().toggleLocale(newLocale);
                         Navigator.of(context).pop();
                       },
-                      child: const Text("Language"),
+                      //add s text
+                      child: const Text("English"),
                     ),
                   ),
                 ],

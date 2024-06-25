@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+// ignore: constant_identifier_names
 enum AppTheme { Light, Dark }
 
 class ThemeCubit extends Cubit<AppTheme> {
@@ -13,7 +14,7 @@ class ThemeCubit extends Cubit<AppTheme> {
 }
 
 class LocaleCubit extends Cubit<Locale> {
-  LocaleCubit() : super(Locale('en'));
+  LocaleCubit() : super(const Locale('ar'));
 
   void toggleLocale(Locale newLocale) {
     emit(newLocale);
