@@ -13,8 +13,8 @@ class HomeView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: AppColors.kPrimaryColor,
-          title: Text(S.of(context).al_quran, style: Styles.textStyle24white),
+          // backgroundColor: AppColors.kPrimaryColor,
+          title: Text(S.of(context).al_quran, style: Styles.textStyl18bold),
           centerTitle: true,
         ),
         drawer: const Drawer(child: ChildInDrawer()),

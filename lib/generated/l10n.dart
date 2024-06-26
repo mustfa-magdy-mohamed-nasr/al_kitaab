@@ -100,30 +100,30 @@ class S {
     );
   }
 
-  /// `Hallelujah and praise, Hallelujah great`
+  /// `Astaghfirullaaha wa 'atoobu 'ilayhi`
   String get Hallelujah {
     return Intl.message(
-      'Hallelujah and praise, Hallelujah great',
+      'Astaghfirullaaha wa \'atoobu \'ilayhi',
       name: 'Hallelujah',
       desc: '',
       args: [],
     );
   }
 
-  /// `Citation for Morning`
+  /// `Morning Azkar`
   String get Citation_for_morning {
     return Intl.message(
-      'Citation for Morning',
+      'Morning Azkar',
       name: 'Citation_for_morning',
       desc: '',
       args: [],
     );
   }
 
-  /// `Citation for Evening`
+  /// `Evening Azkar`
   String get Citation_for_Evening {
     return Intl.message(
-      'Citation for Evening',
+      'Evening Azkar',
       name: 'Citation_for_Evening',
       desc: '',
       args: [],

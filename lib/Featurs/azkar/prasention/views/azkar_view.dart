@@ -1,5 +1,4 @@
 import 'package:al_kitaab/Featurs/azkar/prasention/views/widgets/azkar_view_body.dart';
-import 'package:al_kitaab/core/utils/colors.dart';
 import 'package:al_kitaab/core/utils/styles.dart';
 import 'package:al_kitaab/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -12,16 +11,19 @@ class AzkarView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            S.of(context).Citation_for_morning,
-            style: Styles.textStyle24white,
+          appBar: AppBar(
+            title: selectedAzkar == 'sa'
+                ? Text(
+                    S.of(context).Citation_for_morning,
+                    style: Styles.textStyl18bold,
+                  )
+                : Text(
+                    S.of(context).Citation_for_Evening,
+                    style: Styles.textStyl18bold,
+                  ), // Provide an alternative title or handle the null case
+            centerTitle: true,
           ),
-          centerTitle: true,
-          backgroundColor: AppColors.kPrimaryColor,
-        ),
-        body: AzkarViewBody(selectedAzkar: selectedAzkar)
-      ),
+          body: AzkarViewBody(selectedAzkar: selectedAzkar)),
     );
   }
 }

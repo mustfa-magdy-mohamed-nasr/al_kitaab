@@ -26,44 +26,54 @@ class AzkarItem extends StatelessWidget {
         child: Card(
           child: ListTile(
             subtitle: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(azkar.zekr, style: Styles.textStyl18bold),
+                Text(
+                  azkar.zekr,
+                  style: Styles.textStyl18bold,
+                  textAlign: TextAlign.center,
+                ),
                 if (azkar.bless.isNotEmpty)
-                  IconButton(
-                    icon: const Icon(
-                      Icons.info_outline,
-                      color: Colors.blue,
-                    ),
-                    onPressed: () {
-                      showDialog(
-                        context: context,
-                        builder: (BuildContext context) {
-                          return AlertDialog(
-                            title: Text(azkar.bless),
-                            actions: <Widget>[
-                              TextButton(
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                },
-                                child: Center(
-                                  child: Card(
-                                    color: Colors.red,
-                                    child: Padding(
-                                      padding: EdgeInsets.all(10.w),
-                                      child: Text(
-                                        'إلغاء',
-                                        style: Styles.textStylWhite,
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: IconButton(
+                      icon: const Icon(
+                        Icons.info_outline,
+                        color: Colors.blue,
+                      ),
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: Text(
+                                azkar.bless,
+                                textAlign: TextAlign.center,
+                              ),
+                              actions: <Widget>[
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: Center(
+                                    child: Card(
+                                      color: Colors.red,
+                                      child: Padding(
+                                        padding: EdgeInsets.all(10.w),
+                                        child: Text(
+                                          'إلغاء',
+                                          style: Styles.textStylWhite,
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
-                          );
-                        },
-                      );
-                    },
+                              ],
+                            );
+                          },
+                        );
+                      },
+                    ),
                   ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -85,48 +95,58 @@ class AzkarItem extends StatelessWidget {
         child: Card(
           child: ListTile(
             title: Text(
-              azkar.bless,
-              style: Styles.textStyl18bold,
+              azkar.zekr,
+              textAlign: TextAlign.center,
             ),
             subtitle: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(azkar.zekr),
+                Text(
+                  style: Styles.textStyl18bold,
+                  azkar.enzekr,
+                  textAlign: TextAlign.center,
+                ),
                 if (azkar.bless.isNotEmpty)
-                  IconButton(
-                    icon: const Icon(
-                      Icons.info_outline,
-                      color: Colors.blue,
-                    ),
-                    onPressed: () {
-                      showDialog(
-                        context: context,
-                        builder: (BuildContext context) {
-                          return AlertDialog(
-                            title: Text(azkar.bless),
-                            actions: <Widget>[
-                              TextButton(
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                },
-                                child: Center(
-                                  child: Card(
-                                    color: Colors.red,
-                                    child: Padding(
-                                      padding: EdgeInsets.all(10.w),
-                                      child: Text(
-                                        'إلغاء',
-                                        style: Styles.textStylWhite,
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: IconButton(
+                      icon: const Icon(
+                        Icons.info_outline,
+                        color: Colors.blue,
+                      ),
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: Text(
+                                azkar.bless,
+                                textAlign: TextAlign.center,
+                              ),
+                              actions: <Widget>[
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: Center(
+                                    child: Card(
+                                      color: Colors.red,
+                                      child: Padding(
+                                        padding: EdgeInsets.all(10.w),
+                                        child: Text(
+                                          'إلغاء',
+                                          style: Styles.textStylWhite,
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
-                          );
-                        },
-                      );
-                    },
+                              ],
+                            );
+                          },
+                        );
+                      },
+                    ),
                   ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
