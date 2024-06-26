@@ -45,4 +45,5 @@ class AzkarViewBody extends StatelessWidget {
       ),
     );
   }
+  
 }

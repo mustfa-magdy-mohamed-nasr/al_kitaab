@@ -130,11 +130,61 @@ class S {
     );
   }
 
-  /// `الإنجليزية`
-  String get English {
+  /// `About App`
+  String get About_App {
     return Intl.message(
-      'الإنجليزية',
-      name: 'English',
+      'About App',
+      name: 'About_App',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get Cancel {
+    return Intl.message(
+      'Cancel',
+      name: 'Cancel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arabic`
+  String get Language {
+    return Intl.message(
+      'Arabic',
+      name: 'Language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark Mode`
+  String get Dark_Mode {
+    return Intl.message(
+      'Dark Mode',
+      name: 'Dark_Mode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Application Language`
+  String get Change_application_language {
+    return Intl.message(
+      'Change Application Language',
+      name: 'Change_application_language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `App Languagep`
+  String get App_Language {
+    return Intl.message(
+      'App Languagep',
+      name: 'App_Language',
       desc: '',
       args: [],
     );

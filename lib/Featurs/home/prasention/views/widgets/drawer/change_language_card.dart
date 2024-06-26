@@ -19,7 +19,10 @@ class ChangeLanguageCard extends StatelessWidget {
             context: context,
             builder: (BuildContext context) {
               return AlertDialog(
-                title: const Text('App Language'),
+                title: Text(
+                  S.of(context).Change_application_language,
+                  textAlign: TextAlign.center,
+                ),
                 actions: <Widget>[
                   TextButton(
                     onPressed: () {
@@ -29,7 +32,7 @@ class ChangeLanguageCard extends StatelessWidget {
                         color: Colors.red,
                         child: Padding(
                           padding: EdgeInsets.all(10.w),
-                          child: const Text('Cancel'),
+                          child: Text(S.of(context).Cancel),
                         )),
                   ),
                   Card(
@@ -43,7 +46,7 @@ class ChangeLanguageCard extends StatelessWidget {
                         Navigator.of(context).pop();
                       },
                       //add s text
-                      child: Text(S.of(context).English),
+                      child: Text(S.of(context).Language),
                     ),
                   ),
                 ],
@@ -57,7 +60,7 @@ class ChangeLanguageCard extends StatelessWidget {
               Icons.language,
               // color: Colors.grey,
             ),
-            title: const Text('Language'),
+            title: Text(S.of(context).App_Language),
             subtitle: BlocBuilder<LocaleCubit, Locale>(
               builder: (context, locale) {
                 return Text(
